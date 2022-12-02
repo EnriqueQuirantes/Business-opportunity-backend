@@ -10,11 +10,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import Model.UserModel;
-import Service.UserService;
+import com.example.BusinessOpportunity.Model.UserModel;
+import com.example.BusinessOpportunity.Service.UserService;
 
 class TestUsers {
-
+	
 	static UserService userService;
 	@BeforeAll
 	public static void setUp() throws Exception {
@@ -22,6 +22,7 @@ class TestUsers {
 	}
 	
 	//Test cases
+	//dummies for testing, one true case and another false
 	private static Stream<Arguments> userOfTesting(){
 		return Stream.of(
 				Arguments.of(new UserModel(1,"Solera@solera.com","Bootcamp4")),
