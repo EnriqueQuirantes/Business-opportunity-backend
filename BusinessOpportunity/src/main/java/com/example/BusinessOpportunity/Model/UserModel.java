@@ -1,4 +1,4 @@
-package Model;
+package com.example.BusinessOpportunity.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,20 +8,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Users")
+@Table(name="users")
 public class UserModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique=true,nullable=false)
-	private int id;
+	private Integer id;
 	private String username;
 	private String password;
+	
 	public UserModel(int id, String username, String password) {
-		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 	}
+	
+	public UserModel(){
+	}
+	
 	public int getId() {
 		return id;
 	}
